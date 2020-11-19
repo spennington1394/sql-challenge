@@ -44,3 +44,14 @@ on dept_emp.emp_no = employees.emp_no
 select first_name, last_name, sex
 from employees
 where first_name = 'Hercules' and last_name like 'B%' 
+
+--List all employees in the Sales department, including their 
+--employee number, last name, first name, and department name.
+--'Sales'
+select employees.emp_no, employees.first_name, employees.last_name,departments.dept_name
+from dept_emp
+left join departments 
+on dept_emp.dept_no = departments.dept_no
+left join employees 
+on dept_emp.emp_no = employees.emp_no
+where dept_name = 'Sales'
