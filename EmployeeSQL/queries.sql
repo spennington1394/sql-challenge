@@ -17,12 +17,9 @@ where hire_date between '1986-01-01' and '1986-12-31'
 --departments dept_name and dept_no
 --dept_manager has dept_no and emp_no
 --employees has first_name, last_name, emp_no
-select* from dept_manager
-
-select employees.first_name, employees.last_name,
-departments.dept_name, dept.dept_no, dept.emp_no
-from departments
-left join dept_manager on
-dept_manger.dept_no=departments.dept_no
-left join employees on
-employees.emp_no = dept_manager.emp_on
+select employees.first_name, employees.last_name,departments.dept_name, dept_manager.dept_no, dept_manager.emp_no
+from dept_manager
+left join departments 
+on dept_manager.dept_no = departments.dept_no
+left join employees 
+on dept_manager.emp_no = employees.emp_no
