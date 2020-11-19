@@ -1,3 +1,4 @@
+
 --List the following details of each employee: employee number, 
 --last name, first name, sex, and salary
 select employees.emp_no, employees.first_name, employees.last_name, employees.sex, salaries.salary
