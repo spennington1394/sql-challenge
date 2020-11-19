@@ -22,4 +22,19 @@ from dept_manager
 left join departments 
 on dept_manager.dept_no = departments.dept_no
 left join employees 
-on dept_manager.emp_no = employees.emp_no
+on dept_manager.emp_no = employees.emp_no  
+
+--List the department of each employee with the following information: 
+--employee number, last name, first name, and department name.
+--tables have:
+--employees has first_name, last_name, emp_no
+--dept_emp has emp_no and dept_no
+--departments has dept_no and dept_name
+
+select employees.emp_no, employees.first_name, employees.last_name,departments.dept_name, 
+dept_emp.dept_no
+from dept_emp
+left join departments 
+on dept_emp.dept_no = departments.dept_no
+left join employees 
+on dept_emp.emp_no = employees.emp_no
