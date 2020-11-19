@@ -9,7 +9,7 @@ create table Employees(
 	sex varchar not null,
 	hire_date date not null,
 	primary key (emp_no),
-	foreign key (emp_title_id) references Titles (title_id)
+--	foreign key (emp_title_id) references Titles (title_id)
 );
 
 create table Salaries(
@@ -27,14 +27,16 @@ create table Dept_Emp(
 create table Dept_Manager(
 	dept_no varchar not null,
 	emp_no varchar not null,
-	primary key (dept_no),
+--error when importing title_id already exists as a key
+--	primary key (dept_no),
 	foreign key (emp_no) references Employees (emp_no)
 );
 
 create table Titles(
 	title_id varchar not null,
 	title varchar not null,
-	primary key (title_id)
+--error when importing title_id already exists as a key
+--	primary key (title_id)
 );
 
 create table Departments(
