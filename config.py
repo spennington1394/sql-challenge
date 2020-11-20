@@ -1,1 +1,1 @@
-g_key = 'Karen12#'
+g_key = 'Password here'
