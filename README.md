@@ -12,6 +12,10 @@ An ERD was created along with table schema.
 
 Step 4:
 
-Imported 6 csv files into PostgreSQL utilizing the table schema created and began to query.  Queries looked at: 
+Imported 6 csv files into PostgreSQL utilizing the table schema created and began to query.  Queries looked at: employee salary, employees off of hire date, and employees within the sales and development departments.  
+
+Step 5:
+
+Utilized Jupyter Notebook to query same information with SQLAlchemy to create visualizations of employee salary and a bar chart off of salary by title. 
 
 
